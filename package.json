@@ -1,0 +1,28 @@
+{
+    "name": "react-vite",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "build": "npm run build:all",
+        "serve": "npm run serve:all",
+        "build:all": "npm run build:app && npm run build:remotes",
+        "serve:all": "concurrently \"npm run serve:app\" \"npm run serve:remotes\"",
+        "build:app": "cd shell && npm run build",
+        "serve:app": "cd shell && npm run preview",
+        "build:remotes": "npm run build:users && npm run build:tickets && npm run build:ticket_purchase",
+        "serve:remotes": "concurrently \"npm run serve:users\" \"npm run serve:tickets\" \"npm run serve:ticket_purchase\"",
+        "build:users": "cd users && npm run build",
+        "serve:users": "cd users && npm run preview",
+        "build:tickets": "cd tickets && npm run build",
+        "serve:tickets": "cd tickets && npm run preview",
+        "build:ticket_purchase": "cd ticket_purchase && npm run build",
+        "serve:ticket_purchase": "cd ticket_purchase && npm run preview",
+        "dev:hosts": "cd shell && vite dev --mode host",
+        "stop": "kill-port --port 5000,5001,5002"
+    },
+    "devDependencies": {
+        "concurrently": "^6.4.0",
+        "kill-port": "^2.0.1",
+        "@originjs/vite-plugin-federation": "^1.2.3"
+    }
+}
