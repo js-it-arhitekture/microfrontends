@@ -13,13 +13,14 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@tanstack/react-query": "^5.29.2",
     "framer-motion": "^11.0.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
-    "@tanstack/react-query": "^5.29.2"
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.3.5",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",

@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 5002
 
 # Serve the applications
-CMD npm run serve
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "5002", "--strictPort"]
