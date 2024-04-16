@@ -1,0 +1,26 @@
+version: '3'
+services:
+  ticket-purchase:
+    build: ./ticket_purchase
+    ports:
+      - "5003:5003"
+  users:
+    build: ./users
+    ports:
+      - "5001:5001"
+  tickets:
+    build: ./tickets
+    ports:
+      - "5002:5002"
+
+  shell:
+    build: ./shell
+    ports:
+      - "5000:5000"
+    depends_on:
+      - ticket-purchase
+      - users
+      - tickets
+  
+
+
